@@ -20,6 +20,10 @@
     const getDryingDetails=require("../controllers/getDryingDetails")
     const updateDryingDetails=require("../controllers/updateDryingDetails")
     const deleteDryingDetails=require("../controllers/deleteDryingDetails")
+    const irrigationDetails=require("../controllers/irrigationDetails")
+    const getIrrigationDetails=require("../controllers/getIrrigationDetails")
+    const updateIrrigationDetails=require("../controllers/updateIrrigationDetails")
+    const deleteIrrigationDetails=require("../controllers/deleteIrrigationDetails")
 
     router.use("/",cropDetails)
     router.use("/",getCropDetails)
@@ -39,7 +43,9 @@
     router.use("/",deleteThreshingDetails)
     router.use("/",dryingDetails)
     router.use("/",getDryingDetails)
-   /* router.use("/",updateDryingDetails)
-    router.use("/",deleteDryingDetails)*/
+    router.use("/",irrigationDetails)
+    router.use("/",getIrrigationDetails)
+    router.use("/",updateIrrigationDetails)
+    router.use("/",deleteIrrigationDetails)
     module.exports=router
     
