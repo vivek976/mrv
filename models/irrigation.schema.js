@@ -11,7 +11,19 @@ const IrrigationSchema=new mongoose.Schema(
           pump_type: {
             type: String,
             enum: ['Electricity Based', 'Diesel Based', 'Solar Based']
-          } 
+          } ,
+          unitCost: { type: Number, required: true },
+          fuelCost: { type: Number, required: true }, 
+          machineApplicable: { type: String, enum: ['Applicable', 'Not Applicable'], required: true }, 
+          machineType: { type: String }, 
+          machineDetails: { type: String }, 
+          isMachineOwned: { type: Boolean }, 
+          machineBrand: { type: String }, 
+          labourForIrrigationApplicable: { type: String, enum: ['Applicable', 'Not Applicable'], required: true }, 
+          pumpCompanyName: { type: String },
+          pumpHP: { type: Number }, 
+          boreOutletPipeDiameter: { type: Number }
+
     }
 );
 const PuddlingNurseryMainSchema = new mongoose.Schema({
