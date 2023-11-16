@@ -15,13 +15,13 @@ router.post("/updateIrrigationDetails", async (req, res) => {
             transplanting_days_under_submerged_conditions:transplanting_days_under_submerged_conditions,
              controlled_irrigation_facilities_available:controlled_irrigation_facilities_available,
               controlled_drainage_facilities_available:controlled_drainage_facilities_available,
-               irrigationDetails:irrigationDetails 
+              table_data:irrigationDetails 
         },
         { new: true } 
       );
   
       if (!Irrigation) {
-        return res.status(404).json({ error: 'Threshing details not found' });
+        return res.status(404).json({ error: 'irrigation details not found' });
       }
   
       res.json(Irrigation);
@@ -32,4 +32,4 @@ router.post("/updateIrrigationDetails", async (req, res) => {
   });
   
   module.exports = router;
-  
+              
